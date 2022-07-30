@@ -24,13 +24,13 @@
                 <a class="btn-close" th:href="@{/registration}" data-bs-dismiss="alert"
                    aria-label="Close"></a>
             </div>
-            <p class="text-black-50">Name: <input class="form-control" type="text" th:field="*{name}"/></p>
+            <p class="text-black-50">Name: <input class="form-control" type="text" th:field="*{name}" autocomplete="off"/></p>
             <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${#fields.hasErrors('email')}">
                 <span th:errors="*{email}">Email error</span>
                 <a class="btn-close" th:href="@{/registration}" data-bs-dismiss="alert"
                    aria-label="Close"></a>
             </div>
-            <p class="text-black-50">Email: <input class="form-control" type="text" th:field="*{email}"/></p>
+            <p class="text-black-50">Email: <input class="form-control" type="text" th:field="*{email}" autocomplete="off"/></p>
             <div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${#fields.hasErrors('passwordHash')}">
                 <span th:errors="*{passwordHash}">Password error</span>
                 <a class="btn-close" th:href="@{/registration}" data-bs-dismiss="alert"

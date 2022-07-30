@@ -33,7 +33,7 @@ public class UserController {
         return "redirect:/users";
     }
 
-    @PostMapping("/activate")
+    @PostMapping("/unblock")
     public String activateUsers(@ModelAttribute IdsForm idsForm) {
         this.changeUsersStatus(idsForm.getIds(), true);
         return "redirect:/users";
